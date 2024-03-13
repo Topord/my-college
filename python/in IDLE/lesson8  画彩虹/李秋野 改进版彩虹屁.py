@@ -1,0 +1,127 @@
+import turtle as t
+#彩虹-------------------------------------------------------------------------------------------------------------------------------
+def rainbow(y,x):
+    t.penup()
+    t.goto(-250+2*x,0)
+    t.pendown()
+    if(y==1):#红
+        t.color('red','red')
+    if(y==2):#橙
+        t.color('orange','orange')
+    if(y==3):#黄
+        t.color('yellow','yellow')
+    if(y==4):#绿
+        t.color('green','green')
+    if(y==5):#蓝
+        t.color('blue','blue')
+    if(y==6):#靛
+        t.color('indigo','indigo')
+    if(y==7):#紫
+        t.color('purple','purple')
+    t.pensize(25)
+    t.setheading(90)
+    t.circle(2*x-190,180)
+    
+#汉字----------------------------------------------------------------------------------------------------------------------------
+def write():
+    t.penup()
+    t.goto(-40,-80)
+    t.pendown()
+    t.pensize(1)
+    t.pencolor('red')
+    t.write('你有时候是不是特孤独？',move=True,align='center',font=('方正舒体',20,'normal'))
+    t.penup()
+    t.setheading(-90)
+    t.forward(40)
+    t.setheading(180)
+    t.forward(80)
+    t.setheading(0)
+    t.pendown()
+    t.write('世界上这么优秀的人就只有你一个！',move=True,align='center',font=('方正舒体',20,'normal'))
+    t.hideturtle()
+    t.setheading(0)
+    t.forward(40)
+#表情-----------------------------------------------------------------------------------------------------------------------------
+def face():
+    t.color('yellow','yellow')
+    t.begin_fill()
+    t.circle(50)
+    t.end_fill()
+    #嘴巴
+    t.penup()
+    t.setheading(90)
+    t.forward(15)
+    t.pendown()
+    t.setheading(0)
+    t.pensize(1)
+    t.color('black')
+    t.begin_fill()
+    t.color('black','white')
+    t.circle(13,360)
+    t.end_fill()
+    #眼白
+    t.setheading(90)
+    t.pencolor('yellow')
+    t.penup()
+    t.forward(35)
+    t.setheading(180)
+    t.forward(35)
+    t.pendown()
+    t.setheading(0)
+    t.color('white')
+    t.begin_fill()
+    t.circle(15)
+    t.end_fill()
+    #眼球
+    t.color('black')
+    t.begin_fill()
+    t.circle(10)
+    t.end_fill()
+    #眼白
+    t.setheading(0)
+    t.penup()
+    t.forward(30)
+    t.pendown()
+    t.color('white')
+    t.setheading(0)
+    t.begin_fill()
+    t.circle(15)
+    t.end_fill()
+    #眼球
+    t.color('black')
+    t.begin_fill()
+    t.circle(10)
+    t.end_fill()
+#爱心------------------------------------------------------------------------------------------------------------------------------
+def heart():
+    t.begin_fill()
+    t.color('red')
+    t.hideturtle()
+    t.speed(0)
+    t.setheading(120)
+    t.circle(15,200)
+    t.forward(30)
+    t.left(90)
+    t.forward(30)
+    t.circle(15,200)
+    t.end_fill()
+    t.penup()
+    t.setheading(0)
+    t.forward(40)
+    t.pendown()
+#开始作画----------------------------------------------------------------------------------------------------------------------------
+t.setup(800,600)
+t.tracer(0)
+t.hideturtle()
+rainbow(1,10)
+rainbow(2,20)
+rainbow(3,30)
+rainbow(4,40)
+rainbow(5,50)
+rainbow(6,60)
+rainbow(7,70)
+#彩虹------------
+write()#字----------
+heart()#爱心------------
+face()#表情------------------
+t.update()

@@ -1,0 +1,25 @@
+import turtle as t
+t.hideturtle()
+t.speed(0)
+def dotline(x,y):
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    for i in range(14):
+        t.pencolor('red')
+        t.seth(90)
+        t.penup()
+        t.forward(3)
+        t.pendown()
+        t.forward(2)
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    for i in range(14):
+        t.pencolor('red')
+        t.seth(-90)
+        t.penup()
+        t.forward(3)
+        t.pendown()
+        t.forward(2)
+dotline(0,0)
